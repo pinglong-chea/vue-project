@@ -1,15 +1,13 @@
 <script setup>
-import { ref } from 'vue';
 
-defineProps({
+const props = defineProps({
   name: { type: String, default: 'Default Plan' },
+  selected: {type: Boolean, default: false}
 })
-const emit = defineEmits(['hi-there'])
+const emit = defineEmits(['selected'])
 
-const selected = ref(false)
 function selectPlan () {
-  selected.value = !selected.value
-  emit('hi-there')
+  emit('selected', props.name)
 }
 </script>
 <template>
