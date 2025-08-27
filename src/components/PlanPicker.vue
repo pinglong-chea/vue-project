@@ -12,6 +12,7 @@ function handleSelectCoffeePlan(name) {
 <template>
   <div class="plans">
     {{ selectedCoffeePlan }}
-    <CoffeePlan v-for="plan in plans" :key="plan" :name="plan" @selected="handleSelectCoffeePlan" :selected="plan === selectedCoffeePlan" />
+    <CoffeePlan v-for="plan in plans" :key="plan" :name="plan" @selected="handleSelectCoffeePlan"
+      :selected="plan === selectedCoffeePlan" />
   </div>
 </template>
