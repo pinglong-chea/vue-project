@@ -1,11 +1,13 @@
 <script setup>
+import FancyButton from './components/FancyButton.vue';
 import PlanPicker from './components/PlanPicker.vue';
 import { ref } from 'vue';
-const slow = ref(true)
+const show = ref(true)
+
 </script>
 
 <template>
-  <div class="content">
+  <!-- <div class="content">
     <h1 class="title">Coffee Plans</h1>
 
     <h2 class="subtitle">
@@ -18,5 +20,10 @@ const slow = ref(true)
     </label>
 
     <PlanPicker v-if="show"/>
+  </div> -->
+  <div class="content">
+    <FancyButton>
+      Submit
+    </FancyButton>
   </div>
 </template>
