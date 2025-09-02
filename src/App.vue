@@ -23,7 +23,10 @@ const show = ref(true)
   </div> -->
   <div class="content">
     <FancyButton>
-      Submit
+      <template #icon="{ hover }">
+        {{ hover ? '👋' : '➡️' }}
+      </template>
+        Submit
     </FancyButton>
   </div>
 </template>
