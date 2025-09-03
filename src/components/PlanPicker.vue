@@ -11,7 +11,7 @@ function handleSelectCoffeePlan(name) {
 
 const count = ref(0);
 const interval = setInterval(() => {
-  count.value++
+  // count.value++
   // console.log('hello');
 }, 1000)
 
