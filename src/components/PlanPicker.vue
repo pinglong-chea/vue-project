@@ -24,7 +24,7 @@ onUnmounted(() => {
 <template>
   <div class="plans">
     <!-- {{ selectedCoffeePlan }} -->
-      {{ count }}
+    {{ count }}
     <CoffeePlan v-for="plan in plans" :key="plan" :name="plan" @selected="handleSelectCoffeePlan"
       :selected="plan === selectedCoffeePlan" />
   </div>
