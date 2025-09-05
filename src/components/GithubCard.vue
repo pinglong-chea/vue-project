@@ -13,10 +13,7 @@ fetch(`https://api.github.com/users/${props.username}`).then(async (res) => {
 </script>
 
 <template>
-  <div v-if="user" class="card card-side bg-base-100 shadow-sm">
-    <figure>
-      <img :src="user.avatar_url" alt="Movie" />
-    </figure>
+  <div v-if="user" class="card card-side  shadow-sm">
     <div class="card-body">
       <h2 class="card-title">{{ user.name }}</h2>
       <p><strong>Followers:</strong> {{ user.followers }} </p>
