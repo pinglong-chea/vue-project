@@ -1,20 +1,19 @@
 <script setup>
-
 const props = defineProps({
   name: {
     type: String,
     default: 'Default Plan',
     validator(value) {
-      return value.startsWith("The")
-    }
+      return value.startsWith('The')
+    },
   },
-  selected: { type: Boolean, default: false }
+  selected: { type: Boolean, default: false },
 })
 const emit = defineEmits({
   hiThere: null,
-  selected(payload){
+  selected(payload) {
     return typeof payload === 'string'
-  }
+  },
 })
 
 function selectPlan() {

@@ -1,8 +1,8 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue'
 
 const props = defineProps({
-  id: { type: Number, required: true }
+  id: { type: Number, required: true },
 })
 
 const game = ref(null)

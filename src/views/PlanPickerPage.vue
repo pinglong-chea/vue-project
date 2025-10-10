@@ -1,9 +1,8 @@
 <script setup>
-import PlanPicker from '@/components/PlanPicker.vue';
+import PlanPicker from '@/components/PlanPicker.vue'
 
-import { ref } from 'vue';
+import { ref } from 'vue'
 const show = ref(true)
-
 </script>
 
 <template>

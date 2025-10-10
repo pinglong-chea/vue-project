@@ -1,12 +1,12 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref } from 'vue'
 import IconError from './icons/IconError.vue'
 import IconWarning from './icons/IconWarning.vue'
 import IconSuccess from './icons/IconSuccess.vue'
 import IconInfo from './icons/IconInfo.vue'
 
 const props = defineProps({
-  type: { type: String, default: "info" },
+  type: { type: String, default: 'info' },
 })
 
 const emit = defineEmits(['closed'])
@@ -24,7 +24,7 @@ const icon = computed(() => {
     info: IconInfo,
     warning: IconWarning,
     success: IconSuccess,
-    error: IconError
+    error: IconError,
   }[props.type]
 })
 
