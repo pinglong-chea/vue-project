@@ -18,9 +18,6 @@ fetch(`https://api.github.com/users/${props.username}`).then(async (res) => {
       <h2 class="card-title">{{ user.name }}</h2>
       <p><strong>Followers:</strong> {{ user.followers }}</p>
       <p><strong>Followings:</strong> {{ user.following }}</p>
-      <div class="card-actions justify-end">
-        <a :href="user.html_url" class="btn btn-primary">View Profile</a>
-      </div>
     </div>
   </div>
 </template>

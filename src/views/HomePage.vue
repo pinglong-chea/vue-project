@@ -1,8 +1,21 @@
+<script setup lang="ts">
+import CardComponent from '@/components/CardComponent.vue';
+
+</script>
+
 <template>
-  <div>
-    <h1>Home Page</h1>
-    <router-link to="/github">Go to Github Page</router-link> <br />
-    <router-link to="/plan">Go to Plan Picker Page</router-link> <br />
-    <router-link to="/alert">Go to Alert Page</router-link>
+  <div class=" flex flex-col gap-y-14 xs:gap-y-8">
+    <div class="badge badge-xl badge-primary bg-primary/40 self-end">
+      <h1 class="text-lg">Home</h1>
+    </div>
+
+    <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 self-center xl:gap-16 md:gap-12 gap-8">
+      <CardComponent card-title="Github" card-body="Go to Github Page with Username, Followers, and Followings"
+        link-to="/github" link-body="View Github" />
+
+      <CardComponent  card-title="Alert" card-body="Go to Alert Page" link-to="/alert" link-body="View Alert"/>
+      <CardComponent  card-title="Plan Picker" card-body="Go to Plan Picker Page" link-to="/alert" link-body="View Alert"/>
+
+    </div>
   </div>
 </template>
