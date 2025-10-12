@@ -4,7 +4,7 @@ import CardComponent from '@/components/CardComponent.vue';
 </script>
 
 <template>
-  <div class=" flex flex-col gap-y-14 xs:gap-y-8">
+  <div class=" flex flex-col gap-y-6 md:gap-y-8">
     <div class="badge badge-xl badge-primary bg-primary/40 self-end">
       <h1 class="text-lg">Home</h1>
     </div>
@@ -13,8 +13,9 @@ import CardComponent from '@/components/CardComponent.vue';
       <CardComponent card-title="Github" card-body="Go to Github Page with Username, Followers, and Followings"
         link-to="/github" link-body="View Github" />
 
-      <CardComponent  card-title="Alert" card-body="Go to Alert Page" link-to="/alert" link-body="View Alert"/>
-      <CardComponent  card-title="Plan Picker" card-body="Go to Plan Picker Page" link-to="/alert" link-body="View Alert"/>
+      <CardComponent card-title="Alert" card-body="Go to Alert Page" link-to="/alert" link-body="View Alert" />
+      <CardComponent card-title="Plan Picker" card-body="Go to Plan Picker Page" link-to="/plan"
+        link-body="View Alert" />
 
     </div>
   </div>
