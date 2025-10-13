@@ -16,7 +16,7 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="card bg-secondary/25 card-side xl:card-lg shadow-sm">
+  <div class="card bg-secondary/25 shadow-sm card-lg">
     <div class="card-body">
       <h2 class="card-title">{{ props.cardTitle }}</h2>
       <p>{{ props.cardBody }}</p>
