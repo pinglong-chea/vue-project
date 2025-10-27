@@ -4,15 +4,14 @@ const props = defineProps({
     type: String,
   },
   cardBody: {
-    type: String
+    type: String,
   },
   linkTo: {
-    type: String
+    type: String,
   },
   linkBody: {
-    type: String
-  }
-
+    type: String,
+  },
 })
 </script>
 <template>
@@ -21,8 +20,9 @@ const props = defineProps({
       <h2 class="card-title">{{ props.cardTitle }}</h2>
       <p>{{ props.cardBody }}</p>
       <div class="justify-end card-actions">
-        <button class="btn btn-info bg-info/40 rounded-lg text-white"><router-link :to="props.linkTo">{{ props.linkBody
-            }}</router-link></button>
+        <button class="btn btn-info bg-info/40 rounded-lg text-white">
+          <router-link :to="props.linkTo">{{ props.linkBody }}</router-link>
+        </button>
       </div>
     </div>
   </div>

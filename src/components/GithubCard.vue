@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 
 const props = defineProps({
   username: { type: String, required: true },
-  alignLeft: { type: Boolean, default: true }
+  alignLeft: { type: Boolean, default: true },
 })
 
 const user = ref(null)
@@ -15,11 +15,14 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div v-if="user" :class="[
-    props.alignLeft
-      ? 'justify-center md:justify-self-start'
-      : 'justify-center md:justify-self-end'
-  ]">
+  <div
+    v-if="user"
+    :class="[
+      props.alignLeft
+        ? 'justify-center md:justify-self-start'
+        : 'justify-center md:justify-self-end',
+    ]"
+  >
     <div class="card bg-secondary/30 shadow-sm card-lg md:w-96">
       <div class="card-body">
         <h2 class="card-title">{{ user.name }}</h2>
