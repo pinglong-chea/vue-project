@@ -1,8 +1,8 @@
 <script setup>
-import { BiHomeAlt } from "react-icons/bi";
 
 
-import GithubCard from '@/components/GithubCard.vue'
+import GithubCard from '@/components/GithubCard.vue';
+import { HomeIcon } from '@heroicons/vue/24/outline'
 const usernames = ['mojombo', 'defunkt', 'pjhyett', 'torvalds', 'gaearon']
 </script>
 <template>
@@ -14,6 +14,8 @@ const usernames = ['mojombo', 'defunkt', 'pjhyett', 'torvalds', 'gaearon']
       <GithubCard v-for="(username, index) in usernames" :key="username" :username="username"
         :align-left="index % 2 === 0" />
     </div>
-    <router-link to="/" class="w-fit"><BiHomeAlt /> <button class="btn bg-success/50">Back home</button> </router-link>
+    <router-link to="/" class="w-fit"> <button class="btn btn-md bg-success">
+        <HomeIcon class="w-6 h-6" />Back home
+      </button> </router-link>
   </div>
 </template>
