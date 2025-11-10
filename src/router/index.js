@@ -10,6 +10,7 @@ const routes = [
   { path: '/hawaii', component: () => import('@/views/HawaiiPage.vue') },
   { path: '/jamaica', component: () => import('@/views/JamaicaPage.vue') },
   { path: '/panama', component: () => import('@/views/PanamaPage.vue') },
+  {path: '/destination/:id', component: () => import('@/views/DestinationShow.vue')}
   // { path: '/github', component: GithubPage },
   // { path: '/plan', component: PlanPickerPage },
   // { path: '/alert', component: AlertPage },
