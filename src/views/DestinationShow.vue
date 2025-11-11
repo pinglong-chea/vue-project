@@ -10,6 +10,7 @@
 
 <script>
 import sourceData from '@/data.json'
+import axios from 'axios';
 export default {
   computed: {
     destinationId() {
@@ -17,6 +18,14 @@ export default {
     },
     destination() {
       return sourceData.destinations.find(destination => destination.id === this.destinationId)
+    }
+  },
+  async created() {
+    try {
+      const response = await axios.get(`https://travel-dummy-api.netlify.app/${this.$route.params.slug}`)
+      this.destination = response.data
+    } catch (error) {
+      console.error('Error fetching destination:', error)
     }
   }
 }
