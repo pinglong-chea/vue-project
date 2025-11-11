@@ -6,11 +6,11 @@ import HomePage from '@/views/HomePage.vue'
 
 const routes = [
   { path: '/', component: HomePage },
-  { path: '/brazil', component: () => import('@/views/BrazilPage.vue') },
-  { path: '/hawaii', component: () => import('@/views/HawaiiPage.vue') },
-  { path: '/jamaica', component: () => import('@/views/JamaicaPage.vue') },
-  { path: '/panama', component: () => import('@/views/PanamaPage.vue') },
-  {path: '/destination/:id', name: 'destination.show', component: () => import('@/views/DestinationShow.vue')}
+  {
+    path: '/destination/:id/:slug',
+    name: 'destination.show',
+    component: () => import('@/views/DestinationShow.vue'),
+  },
   // { path: '/github', component: GithubPage },
   // { path: '/plan', component: PlanPickerPage },
   // { path: '/alert', component: AlertPage },
