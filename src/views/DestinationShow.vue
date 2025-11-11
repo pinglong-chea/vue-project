@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <h2>Hello Destination {{ $route.params.id }}</h2>
-  </div>
+  <section class="destination">
+    <h1>{{ destination.name }}</h1>
+    <div class="destination-details">
+      <img :src="`/images/${destination.image}`" :alt="destination.name">
+      <p>{{ destination.description }}</p>
+    </div>
+  </section>
 </template>
 
 <script>
