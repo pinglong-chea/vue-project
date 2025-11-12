@@ -1,5 +1,5 @@
 <template>
-  <section class="destination">
+  <section v-if="destination" class="destination">
     <h1>{{ destination.name }}</h1>
     <div class="destination-details">
       <img :src="`/images/${destination.image}`" :alt="destination.name">
@@ -10,23 +10,16 @@
 
 <script>
 import sourceData from '@/data.json'
-import axios from 'axios';
 export default {
   computed: {
     destinationId() {
       return parseInt(this.$route.params.id)
     },
     destination() {
-      return sourceData.destinations.find(destination => destination.id === this.destinationId)
+      return sourceData.destinations.find(
+        (destination) => destination.id == this.destinationId
+      )
     }
   },
-  async created() {
-    try {
-      const response = await axios.get(`https://travel-dummy-api.netlify.app/${this.$route.params.slug}`)
-      this.destination = response.data
-    } catch (error) {
-      console.error('Error fetching destination:', error)
-    }
-  }
 }
 </script>
