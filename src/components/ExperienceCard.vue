@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <img :src="`/images/${experience.image}`" :alt="experience.name"/>
+    <img :src="`/images/${experience.image}`" :alt="experience.name" />
     <span class="card__text">
       {{ experience.name }}
     </span>
@@ -8,11 +8,12 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      experience: {
-        type: Object, required: true
-      }
-    }
-  }
+export default {
+  props: {
+    experience: {
+      type: Object,
+      required: true,
+    },
+  },
+}
 </script>

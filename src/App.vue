@@ -10,22 +10,24 @@
 </template>
 
 <script>
-import TheNavigation from '@/components/TheNavigation.vue';
+import TheNavigation from '@/components/TheNavigation.vue'
 
 export default {
-  components: { TheNavigation }
+  components: { TheNavigation },
 }
 </script>
 
 <style lang="css">
-  .slide-enter-active,
-  .slide-leave-active {
-    transition: opacity 1s, transform 1s;
-  }
+.slide-enter-active,
+.slide-leave-active {
+  transition:
+    opacity 1s,
+    transform 1s;
+}
 
-  .slide-enter-from,
-  .slide-leave-to {
-    opacity: 0;
-    transform: translateX(-30%);
-  }
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
+}
 </style>
